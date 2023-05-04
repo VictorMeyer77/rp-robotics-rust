@@ -1,4 +1,4 @@
-use rppal::gpio::{Gpio, OutputPin};
+use rppal::gpio::{Gpio, InputPin, OutputPin};
 use std::error::Error;
 use std::thread;
 use std::time::{Duration, Instant};
@@ -8,7 +8,7 @@ const GPIO_ECHO: u8 = 27;
 
 pub fn launch() -> Result<(), Box<dyn Error>> {
     let mut trigger_pin = Gpio::new()?.get(GPIO_TRIGGER)?.into_output();
-    let mut echo_pin = Gpio::new()?.get(GPIO_ECHO)?.into_output();
+    let mut echo_pin = Gpio::new()?.get(GPIO_ECHO)?.into_input();
 
     loop {
         println!(
@@ -21,7 +21,7 @@ pub fn launch() -> Result<(), Box<dyn Error>> {
     }
 }
 
-fn get_distance(trigger_pin: &mut OutputPin, echo_pin: &mut OutputPin) -> f32 {
+fn get_distance(trigger_pin: &mut OutputPin, echo_pin: &mut InputPin) -> f32 {
     trigger_pin.set_high();
     thread::sleep(Duration::from_millis(1));
     echo_pin.set_low();

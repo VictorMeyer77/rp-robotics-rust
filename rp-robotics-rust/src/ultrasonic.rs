@@ -22,8 +22,8 @@ pub fn launch() -> Result<(), Box<dyn Error>> {
 }
 
 fn get_distance(trigger_pin: &mut OutputPin, echo_pin: &mut InputPin) -> f32 {
-    /*trigger_pin.set_high();
-    thread::sleep(Duration::from_millis(1));*/
+    trigger_pin.set_high();
+    thread::sleep(Duration::from_millis(1));
     trigger_pin.set_low();
     let mut start_time: Instant = Instant::now();
     let mut duration: Duration = start_time.elapsed();

@@ -26,9 +26,9 @@ fn get_distance(trigger_pin: &mut OutputPin, echo_pin: &mut OutputPin) -> f32 {
     thread::sleep(Duration::from_millis(1));
     echo_pin.set_low();
     let mut start_time: Instant = Instant::now();
-    let mut duration = start_time.elapsed();
+    let mut duration: Duration = start_time.elapsed();
     while echo_pin.is_set_low() {
-        start_time: Instant = Instant::now();
+        start_time = Instant::now();
     }
     while echo_pin.is_set_high() {
         duration = start_time.elapsed();

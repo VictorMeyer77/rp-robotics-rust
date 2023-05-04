@@ -16,7 +16,7 @@ pub fn launch() -> Result<(), Box<dyn Error>> {
             get_distance(&mut trigger_pin, &mut echo_pin)
         );
 
-        thread::sleep(Duration::from_millis(1));
+        thread::sleep(Duration::from_millis(1000));
 
     }
 }

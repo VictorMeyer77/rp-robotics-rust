@@ -36,20 +36,14 @@ def decrease(target):
         time.sleep(0.05)
         i -= 0.02
 
-try:
-
-    while True:
-        i = start
-        s = input("commnd")
-        print(s)
-        if s == "a" and current_step < 3:
-           current_step += 1
-           increase(steps[current_step])
-        elif s == "z" and current_step > 0:
-            current_step -= 1
-            decrease(steps[current_step])
-        elif s == "p":
-            break
-
-except:
-    KeyboardInterrupt
+while True:
+    s = input("commnd")
+    print(s)
+    if s == "a" and current_step < 3:
+       current_step += 1
+       increase(steps[current_step])
+    elif s == "z" and current_step > 0:
+        current_step -= 1
+        decrease(steps[current_step])
+    elif s == "p":
+        break

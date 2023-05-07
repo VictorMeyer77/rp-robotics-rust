@@ -19,7 +19,7 @@ print("3")
 time.sleep(5)
 
 start = 4
-max = 5
+max = 5.5
 
 try:
 

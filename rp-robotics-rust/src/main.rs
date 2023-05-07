@@ -23,7 +23,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     thread::sleep(Duration::from_secs(2));
 
     // Reconfigure the PWM channel for an 8 Hz frequency, 50% duty cycle.
-    pwm.set_frequency(1000.0, 0.5)?;
+    pwm.set_frequency(1000.0, 1.0)?;
 
     thread::sleep(Duration::from_secs(3));
 

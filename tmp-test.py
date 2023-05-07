@@ -18,7 +18,7 @@ p.ChangeDutyCycle(3)
 print("3")
 time.sleep(5)
 
-start = 4
+i = 4
 steps = [5.85, 5.9, 5.95, 6.0]
 current_step = -1
 

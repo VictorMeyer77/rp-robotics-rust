@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12,GPIO.OUT)
 
-p = GPIO.PWM(12, 20)
+p = GPIO.PWM(12, 100)
 
 p.start(0)
 print("Starting 0")

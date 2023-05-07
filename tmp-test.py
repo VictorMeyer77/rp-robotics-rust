@@ -18,19 +18,21 @@ p.ChangeDutyCycle(3)
 print("3")
 time.sleep(5)
 
+start = 2
+max = 4
 
 try:
 
     while True:
-        i = 4
-        while i < 10:
+        i = start
+        while i < max:
 
             print(i)
             p.ChangeDutyCycle(i)
             time.sleep(0.05)
             i += 0.02
 
-        while i > 4:
+        while i > max:
             print(i)
             p.ChangeDutyCycle(i)
             time.sleep(0.05)

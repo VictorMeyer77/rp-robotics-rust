@@ -41,6 +41,7 @@ try:
     while True:
         i = start
         s = input("commnd")
+        print(s)
         if s == "a" and current_step < 3:
            current_step += 1
            increase(steps[current_step])

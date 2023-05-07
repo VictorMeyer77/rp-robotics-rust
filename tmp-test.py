@@ -19,24 +19,36 @@ print("3")
 time.sleep(5)
 
 start = 4
-max = 5.85
+steps = [5.85, 5.9, 5.95, 6.0]
+current_step = -1
+
+def increase(target):
+    while i < target:
+        print(i)
+        p.ChangeDutyCycle(i)
+        time.sleep(0.05)
+        i += 0.02
+
+def decrease(target):
+    while i > target:
+        print(i)
+        p.ChangeDutyCycle(i)
+        time.sleep(0.05)
+        i -= 0.02
 
 try:
 
     while True:
         i = start
-        while i < max:
-
-            print(i)
-            p.ChangeDutyCycle(i)
-            time.sleep(0.05)
-            i += 0.02
-        time.sleep(3)
-        while i > max:
-            print(i)
-            p.ChangeDutyCycle(i)
-            time.sleep(0.05)
-            i -= 0.05
+        s = input("commnd")
+        if s == "a" and current_step < 3:
+           current_step += 1
+           increase(steps[current_step])
+        elif s == "z" and current_step > 0
+            current_step -= 1
+            decrease(steps[current_step])
+        elif s == "p":
+            break
 
 except:
     KeyboardInterrupt

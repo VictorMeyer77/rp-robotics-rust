@@ -44,7 +44,7 @@ try:
         if s == "a" and current_step < 3:
            current_step += 1
            increase(steps[current_step])
-        elif s == "z" and current_step > 0
+        elif s == "z" and current_step > 0:
             current_step -= 1
             decrease(steps[current_step])
         elif s == "p":

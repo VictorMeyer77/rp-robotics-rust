@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12,GPIO.OUT)
 
-p = GPIO.PWM(12,50)
+p = GPIO.PWM(12, 50)
 
 p.start(0)
 print("Starting 0")
@@ -19,7 +19,7 @@ print("3")
 time.sleep(5)
 
 start = 4
-max = 6
+max = 5.75
 
 try:
 
